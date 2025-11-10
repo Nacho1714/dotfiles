@@ -1,0 +1,27 @@
+# Archivos sensibles
+**/id_rsa*
+**/id_ed25519*
+**/*.key
+**/*.pem
+**/known_hosts
+**/.gnupg/*
+
+# Tokens y credenciales
+**/.aws/credentials
+**/.docker/config.json
+**/auth.json
+**/.npmrc
+**/.pypirc
+
+# Archivos temporales
+*.swp
+*.swo
+*~
+.DS_Store
+*.log
+
+# Directorios de backup
+*_backup_*/
+
+# Metadata de instalación (opcional, ver abajo)
+.install_metadata
