@@ -1,7 +1,7 @@
 #!/bin/bash
 # Utils Aliases
 
-# alias h='history'
+alias h='history'
 # alias hg='history | grep'
 # alias c='clear'
 # alias path='echo -e ${PATH//:/\\n}'

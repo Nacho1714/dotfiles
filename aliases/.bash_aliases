@@ -9,10 +9,15 @@ ALIASES_DIR="${HOME}/.config/aliases"
 # Función para cargar aliases de forma segura
 load_aliases() {
     local category="$1"
-    local alias_file="${ALIASES_DIR}/${category}/aliases.sh"
-    
-    if [ -f "$alias_file" ]; then
-        source "$alias_file"
+    local category_path="${ALIASES_DIR}/${category}"
+
+    # Cargar todos los archivos .sh dentro de la categoría
+    if [ -d "$category_path" ]; then
+        for alias_file in "$category_path"/*.sh; do
+            if [ -f "$alias_file" ]; then
+                source "$alias_file"
+            fi
+        done
     fi
 }
 
